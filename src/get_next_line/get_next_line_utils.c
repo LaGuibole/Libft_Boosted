@@ -32,15 +32,15 @@ char	*ft_strdup(const char *s)
 	return (str);
 }
 
-size_t	ft_strlen(const char *s)
-{
-	int	i;
+// size_t	ft_strlen(const char *s)
+// {
+// 	int	i;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
+// 	i = 0;
+// 	while (s[i] != '\0')
+// 		i++;
+// 	return (i);
+// }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -70,29 +70,29 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (dest);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	char	*result;
-	int		i;
-	int		j;
-	int		total_len;
+// char	*ft_strjoin(char const *s1, char const *s2)
+// {
+// 	char	*result;
+// 	int		i;
+// 	int		j;
+// 	int		total_len;
 
-	i = 0;
-	while (s1 && s1[i])
-		i++;
-	j = 0;
-	while (s2 && s2[j])
-		j++;
-	total_len = i + j;
-	result = (char *)malloc(total_len + 1);
-	if (!result)
-		return (NULL);
-	i = -1;
-	while (s1 && s1[++i])
-		result[i] = s1[i];
-	j = -1;
-	while (s2 && s2[++j])
-		result[i + j] = s2[j];
-	result[i + j] = '\0';
-	return (result);
-}
+// 	i = 0;
+// 	while (s1 && s1[i])
+// 		i++;
+// 	j = 0;
+// 	while (s2 && s2[j])
+// 		j++;
+// 	total_len = i + j;
+// 	result = (char *)malloc(total_len + 1);
+// 	if (!result)
+// 		return (NULL);
+// 	i = -1;
+// 	while (s1 && s1[++i])
+// 		result[i] = s1[i];
+// 	j = -1;
+// 	while (s2 && s2[++j])
+// 		result[i + j] = s2[j];
+// 	result[i + j] = '\0';
+// 	return (result);
+// }
