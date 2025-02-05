@@ -33,5 +33,5 @@ size_t	ft_strspn(const char *str, const char *accept)
 			return (i);
 		i++;
 	}
-	return (0);
+	return (1);
 }
