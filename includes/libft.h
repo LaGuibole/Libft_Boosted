@@ -39,6 +39,7 @@ typedef struct s_list
 }	t_list;
 
 // LIBFT
+size_t	ft_strspn(const char *str, const char *accept);
 
 void	ft_putchar(char c);
 
