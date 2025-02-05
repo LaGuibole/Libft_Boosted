@@ -40,8 +40,6 @@ typedef struct s_list
 
 // LIBFT
 
-int	ft_strcmp(char *s1, char *s2);
-
 void	ft_putchar(char c);
 
 int		ft_isalpha(int c);
