@@ -12,25 +12,25 @@
 
 #include "../includes/libft.h"
 
-char	*ft_strdup(const char *s)
-{
-	int		s_len;
-	char	*str;
-	int		i;
+// char	*ft_strdup(const char *s)
+// {
+// 	int		s_len;
+// 	char	*str;
+// 	int		i;
 
-	s_len = ft_strlen(s);
-	str = malloc(sizeof(char) * s_len + 1);
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		str[i] = s[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
-}
+// 	s_len = ft_strlen(s);
+// 	str = malloc(sizeof(char) * s_len + 1);
+// 	if (!str)
+// 		return (NULL);
+// 	i = 0;
+// 	while (s[i] != '\0')
+// 	{
+// 		str[i] = s[i];
+// 		i++;
+// 	}
+// 	str[i] = '\0';
+// 	return (str);
+// }
 
 // size_t	ft_strlen(const char *s)
 // {
@@ -42,33 +42,33 @@ char	*ft_strdup(const char *s)
 // 	return (i);
 // }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char		*dest;
-	size_t		i;
-	size_t		j;
+// char	*ft_substr(char const *s, unsigned int start, size_t len)
+// {
+// 	char		*dest;
+// 	size_t		i;
+// 	size_t		j;
 
-	if (start >= (unsigned int)ft_strlen((char *)s))
-		return (ft_strdup(""));
-	if (len > ft_strlen((char *)s) - start)
-		len = ft_strlen((char *)s) - start;
-	i = 0;
-	j = 0;
-	dest = malloc(sizeof(char) * (len + 1));
-	if (!dest)
-		return (NULL);
-	while (s[i] != '\0')
-	{
-		if (i >= start && j < len)
-		{
-			dest[j] = s[i];
-			j++;
-		}
-		i++;
-	}
-	dest[j] = '\0';
-	return (dest);
-}
+// 	if (start >= (unsigned int)ft_strlen((char *)s))
+// 		return (ft_strdup(""));
+// 	if (len > ft_strlen((char *)s) - start)
+// 		len = ft_strlen((char *)s) - start;
+// 	i = 0;
+// 	j = 0;
+// 	dest = malloc(sizeof(char) * (len + 1));
+// 	if (!dest)
+// 		return (NULL);
+// 	while (s[i] != '\0')
+// 	{
+// 		if (i >= start && j < len)
+// 		{
+// 			dest[j] = s[i];
+// 			j++;
+// 		}
+// 		i++;
+// 	}
+// 	dest[j] = '\0';
+// 	return (dest);
+// }
 
 // char	*ft_strjoin(char const *s1, char const *s2)
 // {
