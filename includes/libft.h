@@ -29,7 +29,7 @@
 # define BOLD_RED "\033[1;31m"
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 100
 # endif
 
 typedef struct s_list
