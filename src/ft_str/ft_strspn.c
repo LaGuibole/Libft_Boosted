@@ -16,7 +16,7 @@ size_t	ft_strspn(const char *str, const char *accept)
 {
 	size_t	i;
 	size_t	j;
-	int found;
+	int	found;
 
 	i = 0;
 	while (str[i])
