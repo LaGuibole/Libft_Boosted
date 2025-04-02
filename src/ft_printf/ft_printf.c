@@ -6,30 +6,30 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:11:25 by guphilip          #+#    #+#             */
-/*   Updated: 2024/12/29 12:15:40 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/03/26 16:51:30 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-static int	ft_check_format(va_list args, const char format)
+static int	ft_check_format(int fd, va_list args, const char format)
 {
 	if (format == 'c')
-		return (ft_print_c(va_arg(args, int)));
+		return (ft_print_c(fd, va_arg(args, int)));
 	if (format == 's')
-		return (ft_print_s(va_arg(args, char *)));
+		return (ft_print_s(fd, va_arg(args, char *)));
 	if (format == 'p')
-		return (ft_print_p(va_arg(args, uintptr_t)));
+		return (ft_print_p(fd, va_arg(args, uintptr_t)));
 	if (format == 'd' || format == 'i')
-		return (ft_print_d(va_arg(args, int)));
+		return (ft_print_d(fd, va_arg(args, int)));
 	if (format == 'u')
-		return (ft_print_u(va_arg(args, unsigned int)));
+		return (ft_print_u(fd, va_arg(args, unsigned int)));
 	if (format == 'x' || format == 'X')
-		return (ft_print_x(va_arg(args, unsigned int), format));
+		return (ft_print_x(fd, va_arg(args, unsigned int), format));
 	if (format == '%')
-		return (ft_print_c('%'));
+		return (ft_print_c(fd, '%'));
 	else
-		return (ft_print_c('%'), ft_print_c(format), 2);
+		return (ft_print_c(fd, '%'), ft_print_c(fd, format), 2);
 	return (0);
 }
 
@@ -46,11 +46,35 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			len += ft_check_format(args, str[i + 1]);
+			len += ft_check_format(1, args, str[i + 1]);
 			i++;
 		}
 		else
-			len += ft_print_c(str[i]);
+			len += ft_print_c(1, str[i]);
+		i++;
+	}
+	va_end(args);
+	return (len);
+}
+
+int fd_printf(int fd, const char *str, ...)
+{
+	int		i;
+	int		len;
+	va_list	args;
+
+	i = 0;
+	len = 0;
+	va_start(args, str);
+	while (str[i])
+	{
+		if (str[i] == '%')
+		{
+			len += ft_check_format(fd, args, str[i + 1]);
+			i++;
+		}
+		else
+			len += ft_print_c(fd, str[i]);
 		i++;
 	}
 	va_end(args);

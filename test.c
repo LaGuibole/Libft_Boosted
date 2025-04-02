@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_x.c                                       :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 15:37:51 by guphilip          #+#    #+#             */
-/*   Updated: 2025/03/26 16:41:17 by guphilip         ###   ########.fr       */
+/*   Created: 2025/03/26 16:52:13 by guphilip          #+#    #+#             */
+/*   Updated: 2025/03/26 16:53:32 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "includes/libft.h"
 
-static	int	ft_print_hexa(int fd, unsigned int n, char *car)
+int main(void)
 {
-	if (n >= 16)
-		return (ft_print_hexa(fd, n / 16, car) + ft_print_hexa(fd, n % 16, car));
-	return (ft_print_c(fd, car[n]));
-}
-
-int	ft_print_x(int fd, unsigned int n, int format)
-{
-	char	*chars;
-
-	chars = L_HEX_CHARSET;
-	if (format == 'X')
-		chars = U_HEX_CHARSET;
-	return (ft_print_hexa(fd, n, chars));
+	char *str = "ma bite";
+	fd_printf(2, "%s", str);
+	return (0);
 }

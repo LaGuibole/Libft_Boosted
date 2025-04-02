@@ -6,13 +6,13 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:20:36 by guphilip          #+#    #+#             */
-/*   Updated: 2024/12/29 12:15:16 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/03/26 16:37:34 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_print_c(char c)
+int	ft_print_c(int fd, char c)
 {
-	return (write(1, &c, 1));
+	return (write(fd, &c, 1));
 }
