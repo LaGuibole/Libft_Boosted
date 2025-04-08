@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:11:25 by guphilip          #+#    #+#             */
-/*   Updated: 2025/03/26 16:51:30 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/04/08 17:32:24 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	ft_printf(const char *str, ...)
 	return (len);
 }
 
-int fd_printf(int fd, const char *str, ...)
+int	fd_printf(int fd, const char *str, ...)
 {
 	int		i;
 	int		len;
