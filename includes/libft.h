@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:07:07 by guphilip          #+#    #+#             */
-/*   Updated: 2025/04/14 16:49:51 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/04/14 16:51:30 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 
 char	**ft_split(char const *s, char c);
 
-char	**split_free(char const *s, char c, bool free_s);
+char	**split_free(char *s, char c, bool free_s);
 
 int		ft_strcmp(char *s1, char *s2);
 
