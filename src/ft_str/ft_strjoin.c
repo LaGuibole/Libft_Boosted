@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:53:25 by guphilip          #+#    #+#             */
-/*   Updated: 2024/11/04 11:59:19 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/04/14 16:40:56 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strcpy(result, (char *)s1);
 	ft_strcat(result, (char *)s2);
 	result[ft_strlen(s1) + ft_strlen(s2)] = '\0';
+	return (result);
+}
+
+char	*free_join(char *s1, char *s2, bool free_s1, bool free_s2)
+{
+	char	*result;
+	result = ft_strjoin(s1, s2);
+	if (free_s1)
+		free(s1);
+	if (free_s2)
+		free(s2);
 	return (result);
 }
 

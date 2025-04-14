@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:07:07 by guphilip          #+#    #+#             */
-/*   Updated: 2025/03/26 16:51:45 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/04/14 16:41:12 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <stdint.h>
+# include <stdbool.h>
 
 # define RESET "\033[0m"
 # define BOLD_YELLOW "\033[1;33m"
@@ -93,6 +94,8 @@ char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 char	*ft_strjoin(char const *s1, char const *s2);
+
+char	*free_join(char *s1, char *s2, bool free_s1, bool free_s2);
 
 char	*ft_strtrim(char const *s1, char const *set);
 
