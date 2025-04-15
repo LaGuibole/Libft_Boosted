@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:27:28 by guphilip          #+#    #+#             */
-/*   Updated: 2025/04/14 16:50:37 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/04/15 10:58:55 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,15 +93,6 @@ char	**ft_split(char const *s, char c)
 	if (fill_tab(s, c, splitted) == 0)
 		return (NULL);
 	return (splitted);
-}
-
-char	**split_free(char *s, char c, bool free_s)
-{
-	char	**result;
-	result = ft_split(s, c);
-	if (free_s)
-		free(s);
-	return (result);
 }
 
 // int	main(void)

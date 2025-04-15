@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:53:25 by guphilip          #+#    #+#             */
-/*   Updated: 2025/04/14 16:40:56 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/04/15 10:59:56 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 char	*free_join(char *s1, char *s2, bool free_s1, bool free_s2)
 {
 	char	*result;
+
 	result = ft_strjoin(s1, s2);
 	if (free_s1)
 		free(s1);
