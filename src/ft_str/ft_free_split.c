@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 10:58:48 by guphilip          #+#    #+#             */
-/*   Updated: 2025/04/15 11:02:03 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:01:10 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ char	**split_free(char *s, char c, bool free_s)
 		free(s);
 	return (result);
 }
-
 
 void	free_double_tab(char **split)
 {
