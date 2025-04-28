@@ -5,7 +5,7 @@ OBJS_DIR 		= obj/
 # Compilateur
 
 CC 				= gcc
-CFLAGS 			= -Wall -Wextra -Werror -I./includes
+CFLAGS 			= -Wall -Wextra -Werror -g -I./includes
 
 # Couleurs && Personnalisation
 
