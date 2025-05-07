@@ -29,7 +29,7 @@ FT_PUTSDIR 		= ft_puts/
 FT_PUTS 		= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd
 
 FT_STRDIR 		= ft_str/
-FT_STR 			= ft_strspn ft_strcmp ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat ft_strlcpy ft_strlen ft_strmapi ft_strncmp ft_strnstr ft_strrchr ft_strtrim ft_substr ft_free_split
+FT_STR 			= ft_strcat ft_strspn ft_strcmp ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat ft_strlcpy ft_strlen ft_strmapi ft_strncmp ft_strnstr ft_strrchr ft_strtrim ft_substr ft_free_split
 
 FT_TODIR 		= ft_to/
 FT_TO 			= ft_atoi ft_itoa ft_tolower ft_toupper
