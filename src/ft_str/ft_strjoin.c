@@ -6,29 +6,29 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:53:25 by guphilip          #+#    #+#             */
-/*   Updated: 2025/04/15 10:59:56 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/05/07 15:30:58 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strcat(char *dest, char *src)
-{
-	int	i;
-	int	dest_size;
+// static char	*ft_strcat(char *dest, char *src)
+// {
+// 	int	i;
+// 	int	dest_size;
 
-	dest_size = 0;
-	while (dest[dest_size] != '\0')
-		dest_size++;
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[dest_size + i] = src[i];
-		i++;
-	}
-	dest[dest_size + i] = '\0';
-	return (dest);
-}
+// 	dest_size = 0;
+// 	while (dest[dest_size] != '\0')
+// 		dest_size++;
+// 	i = 0;
+// 	while (src[i] != '\0')
+// 	{
+// 		dest[dest_size + i] = src[i];
+// 		i++;
+// 	}
+// 	dest[dest_size + i] = '\0';
+// 	return (dest);
+// }
 
 static char	*ft_strcpy(char *dest, char *src)
 {
