@@ -6,30 +6,27 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 15:28:17 by guphilip          #+#    #+#             */
-/*   Updated: 2025/05/07 15:28:28 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/05/07 15:34:46 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, char *src)
+void    my_strcat(char **dst_ptr, const char *src)
 {
-	int	i;
-	int	dest_size;
+    size_t    dst_len;
+    size_t    src_len;
+    char    *ans;
 
-	i = 0;
-	dest_size = 0;
-	while (dest[i] != '\0')
-	{
-		dest_size++;
-		i++;
-	}
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[dest_size + i] = src[i];
-		i++;
-	}
-	dest[dest_size + i] = '\0';
-	return (dest);
+    dst_len = ft_strlen(*dst_ptr);
+    src_len = ft_strlen(src);
+    ans = malloc(dst_len + src_len + 1);
+    if (ans)
+    {
+        ft_memcpy(ans, *dst_ptr, dst_len);
+        ft_memcpy(ans + dst_len, src, src_len);
+        ans[dst_len + src_len] = '\0';
+    }
+    free(*dst_ptr);
+    *dst_ptr = ans;
 }

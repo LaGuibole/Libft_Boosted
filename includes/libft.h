@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:07:07 by guphilip          #+#    #+#             */
-/*   Updated: 2025/05/07 15:28:49 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/05/07 15:35:20 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ void	free_double_tab(char **split);
 
 int		ft_strcmp(char *s1, char *s2);
 
-char	*ft_strcat(char *dest, char *src);
+void    my_strcat(char **dst_ptr, const char *src);
 
 char	*ft_itoa(int n);
 
