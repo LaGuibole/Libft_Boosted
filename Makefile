@@ -20,7 +20,7 @@ RM_LINE 		= @tput cuu1 && tput el
 FT_DIR 			= ft_is ft_mem ft_puts ft_str ft_to ft_lst
 
 FT_ISDIR 		= ft_is/
-FT_IS 			= ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint
+FT_IS 			= ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint ft_str_is_whitespace
 
 FT_MEMDIR 		= ft_mem/
 FT_MEM 			= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset
