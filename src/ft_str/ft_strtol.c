@@ -55,5 +55,5 @@ long	ft_strtol(const char *nptr, char **endptr, int base)
 	}
 	if (endptr)
 		*endptr = (char *)str;
-	return (result + sign);	
+	return (result * sign);	
 }
