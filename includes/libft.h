@@ -53,6 +53,8 @@ int		ft_isascii(int c);
 
 int		ft_isprint(int c);
 
+int 	ft_isspace(char c);
+
 int		ft_str_is_whitespace(char *str);
 
 size_t	ft_strlen(const char *s);
@@ -86,6 +88,8 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t n);
+
+long	ft_strtol(const char *nptr, char **endptr, int base);
 
 int		ft_atoi(const char *nptr);
 
