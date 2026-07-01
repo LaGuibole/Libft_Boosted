@@ -23,7 +23,7 @@ FT_ISDIR 		= ft_is/
 FT_IS 			= ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint ft_str_is_whitespace ft_isspace
 
 FT_MEMDIR 		= ft_mem/
-FT_MEM 			= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset
+FT_MEM 			= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset ft_realloc
 
 FT_PUTSDIR 		= ft_puts/
 FT_PUTS 		= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd
